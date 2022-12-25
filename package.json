@@ -7,5 +7,16 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Nakul Prasad",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NakulPrasad/Natours.git"
+  },
+  "bugs": {
+    "url": "https://github.com/NakulPrasad/Natours/issues"
+  },
+  "homepage": "https://github.com/NakulPrasad/Natours#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
