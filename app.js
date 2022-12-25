@@ -10,6 +10,7 @@ app.get('/', (req, res) => {
 app.post('/', (req, res) => {
   res.send('you can post to this endpoint...');
 });
+
 const port = 2222;
 app.listen(port, () => {
   console.log(`App is listening on ${port}...`);
