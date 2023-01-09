@@ -26,6 +26,18 @@ app.get('/api/v1/tours', (req, res) => {
     },
   });
 });
+
+app.get('/api/v1/tours/:id', (req, res) => {
+  console.log(req.params);
+  res.status(200).json({
+    status: 'success',
+    // results: tours.length,
+    // data: {
+    //   tours,
+    // },
+  });
+});
+
 app.post('/api/v1/tours', (req, res) => {
   // console.log(req.body);
 
