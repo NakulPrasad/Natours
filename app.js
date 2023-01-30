@@ -28,13 +28,33 @@ app.get('/api/v1/tours', (req, res) => {
 });
 
 app.get('/api/v1/tours/:id', (req, res) => {
-  console.log(req.params);
+  // console.log(req.params);
+
+  const id = req.params.id * 1; //converts to number from string
+
+  const tour = tours.find((el) => el.id === id); //ids are in string
+  if (id < tours.length) {
+    res.status(200).json({
+      status: 'success',
+      // results: tours.length,
+      data: {
+        tour,
+      },
+    });
+  } else
+    res.status(404).json({
+      status: 'fail',
+      message: 'invalid id',
+    });
+});
+
+//patch request
+app.patch('/api/v1/tours/:id', (req, res) => {
   res.status(200).json({
     status: 'success',
-    // results: tours.length,
-    // data: {
-    //   tours,
-    // },
+    data: {
+      tour: 'UPDataed DAta',
+    },
   });
 });
 
